@@ -149,9 +149,15 @@ elif choice == "Prediction Tool":
     st.markdown("<br>", unsafe_allow_html=True)
     if st.button("Predict Consumption", use_container_width=True):
         import random
+        import hashlib
+        
+        # Create a deterministic seed based on the inputs so the same inputs yield the exact same output
+        seed_str = f"{temp:.1f}_{rainfall:.1f}_{population}"
+        seed_val = int(hashlib.md5(seed_str.encode("utf-8")).hexdigest()[:8], 16)
+        rnd = random.Random(seed_val)
         
         # Base consumption logic
-        base_per_capita = random.uniform(140.0, 160.0) # Assume 140-160 units per person
+        base_per_capita = rnd.uniform(140.0, 160.0) # Assume 140-160 units per person
         base_consumption = population * base_per_capita
         
         # Temperature increases consumption (e.g., +2% per degree above 20C)
@@ -164,7 +170,7 @@ elif choice == "Prediction Tool":
         prediction = base_consumption * temp_factor * rain_factor
         
         # Add random noise for realism (±5%)
-        prediction *= random.uniform(0.95, 1.05)
+        prediction *= rnd.uniform(0.95, 1.05)
         
         st.success(f"### Predicted Water Consumption: {prediction:,.2f} units")
         st.balloons()
