@@ -31,10 +31,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Paths
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_PATH = os.path.join(BASE_DIR, 'dashboard', 'water_prediction_model.pkl')
-SCALER_PATH = os.path.join(BASE_DIR, 'dashboard', 'feature_scaler.pkl')
-DATA_PATH = os.path.join(BASE_DIR, 'dashboard', 'sample_data.csv')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, 'models', 'water_prediction_model.pkl')
+SCALER_PATH = os.path.join(BASE_DIR, 'models', 'feature_scaler.pkl')
+DATA_PATH = os.path.join(BASE_DIR, 'data', 'sample_data.csv')
 
 # Load Model
 @st.cache_resource

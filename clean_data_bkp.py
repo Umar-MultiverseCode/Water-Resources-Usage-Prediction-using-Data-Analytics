@@ -45,7 +45,7 @@ df_long["population"] = np.random.randint(10000, 50000, size=len(df_long))
 df_long = df_long.reset_index(drop=True)
 
 # save clean dataset
-df_long.to_csv("data/clean_water_data.csv", index=False)
+df_long.to_csv("clean_water_data.csv", index=False)
 
 print("Clean dataset created!")
 print("New shape:", df_long.shape)
