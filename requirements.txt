@@ -4,3 +4,4 @@ scikit-learn
 plotly
 joblib
 streamlit>=1.40.0
+statsmodels
