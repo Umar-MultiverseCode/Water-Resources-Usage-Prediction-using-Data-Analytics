@@ -106,7 +106,8 @@ elif choice == "Data Visualization":
             st.subheader(f"Water Consumption Trend ({trend_col.capitalize()})")
             trend_avg = df.groupby(trend_col)['water_consumption'].mean().reset_index()
             fig_trend = px.line(trend_avg, x=trend_col, y='water_consumption', title="Water Consumption Trend", markers=True)
-            fig_trend.update_layout(plot_bgcolor="rgba(0,0,0,0)", line=dict(color='#8b5cf6', width=3))
+            fig_trend.update_layout(plot_bgcolor="rgba(0,0,0,0)")
+            fig_trend.update_traces(line=dict(color='#8b5cf6', width=3))
             st.plotly_chart(fig_trend, use_container_width=True)
             
         col1, col2 = st.columns(2)
