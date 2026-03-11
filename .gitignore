@@ -13,10 +13,13 @@ __pycache__/
 # Large Data files (Too big for GitHub)
 *.csv
 *.xlsx
-data/
+data/*
+!data/sample_data.csv
 
 # Machine Learning Models (Too big for GitHub)
 *.pkl
+!models/water_prediction_model_compressed.pkl
+!models/feature_scaler.pkl
 *.h5
 *.model
 *.joblib

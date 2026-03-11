@@ -32,7 +32,7 @@ st.markdown("""
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, 'models', 'water_prediction_model.pkl')
+MODEL_PATH = os.path.join(BASE_DIR, 'models', 'water_prediction_model_compressed.pkl')
 SCALER_PATH = os.path.join(BASE_DIR, 'models', 'feature_scaler.pkl')
 DATA_PATH = os.path.join(BASE_DIR, 'data', 'sample_data.csv')
 
