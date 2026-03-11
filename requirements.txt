@@ -1,7 +1,6 @@
 pandas
 numpy
 scikit-learn
-streamlit
 plotly
 joblib
-altair<5
+streamlit>=1.40.0
