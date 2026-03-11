@@ -1,0 +1,37 @@
+# Python Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large Data files (Too big for GitHub)
+*.csv
+*.xlsx
+data/
+
+# Machine Learning Models (Too big for GitHub)
+*.pkl
+*.h5
+*.model
+*.joblib
+
+# Temporary script files
+temp.py
+
+# Streamlit
+.streamlit/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
